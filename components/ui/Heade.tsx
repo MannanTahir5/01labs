@@ -1,29 +1,46 @@
 "use client";
-import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
-import { cn } from "@/lib/utils";
-
-export function NavbarDemo() {
+import React from "react";
+import { FloatingNav } from "../ui/floating-navbar";
+import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+export function FloatingNavDemo() {
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Services",
+      link: "/services",
+      icon: <IconUser className="h-4 w-4 text-blue-950 dark:text-white hover:text-blue-800" />,
+    },
+    {
+      name: "About",
+      link: "/about",
+      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Contact",
+      link: "/contact",
+      icon: (
+        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
+    },
+  ];
   return (
-    <div className="relative w-full flex items-center justify-center bg-transparent ">
-      <Navbar className="top-2" />
+    <div className="relative  w-full">
+      <FloatingNav navItems={navItems} />
+      {/* <DummyContent /> */}
     </div>
   );
 }
-
-function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+const DummyContent = () => {
   return (
-    <div
-      className={cn("fixed top-10 inset-x-0 z-50", className)}
-    >
-      <Menu setActive={setActive}>
-        <HoveredLink   href="/">Home</HoveredLink>
-        <HoveredLink   href="/services">Services</HoveredLink>
-        <HoveredLink   href="/about">About</HoveredLink>
-        <HoveredLink   href="/contact">Contact</HoveredLink>
-        
-         </Menu>
+    <div className="grid grid-cols-1 h-[40rem] w-full bg-white dark:bg-black relative border border-neutral-200 dark:border-white/[0.2] rounded-md">
+      <p className="dark:text-white text-neutral-600 text-center text-4xl mt-40 font-bold">
+        Scroll back up to reveal Navbar
+      </p>
+      <div className="inset-0 absolute bg-grid-black/[0.1] dark:bg-grid-white/[0.2]" />
     </div>
   );
-}
+};

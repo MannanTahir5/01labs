@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { rotate } from "three/tsl"
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -401,7 +400,7 @@ export default function GlobeDemo() {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full bg-sky-50 dark:bg-black">
-      <div className="w-full lg:w-1/2 h-[50vh] lg:h-screen relative overflow-hidden">
+      <div className="w-full lg:w-1/2 h-[50vh]  lg:h-screen relative overflow-hidden">
         <motion.div
           initial={{
             opacity: 0,
@@ -417,11 +416,11 @@ export default function GlobeDemo() {
           className="absolute top-4 left-4 z-10"
         >
         </motion.div>
-        <div className="absolute inset-0 z-0 md:mt-10 ml-20">
+        <div className="absolute inset-0 z-0 md:mt-10 mx-auto" >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="w-full sm:border-2 sm:border-blue-900 mx-36 shadow-lg shadow-blue-500 rounded-3xl lg:w-1/2 p-8">
+      <div className="w-full sm:border-2 sm:border-blue-900 mx-28 sm:shadow-lg sm:shadow-blue-500 rounded-3xl lg:w-1/2 p-8">
         <form className="space-y-6 max-w-md mx-auto">
           <h2 className="text-2xl text-blue-950 font-bold text-center mb-6">Contact Us</h2>
           <div>
