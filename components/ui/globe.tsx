@@ -224,6 +224,8 @@ export function WebGLRendererConfig() {
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio)
     gl.setSize(size.width, size.height)
+    gl.shadowMap.enabled=true
+    
     gl.setClearColor(0x000000, 0)
   }, [gl, size])
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
 import { Button } from "@/components/ui/button"
@@ -399,7 +399,7 @@ export default function GlobeDemo() {
   ]
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full bg-sky-50 dark:bg-black">
+    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full bg-blue-950 dark:bg-black">
       <div className="w-full lg:w-1/2 h-[50vh]  lg:h-screen relative overflow-hidden">
         <motion.div
           initial={{
@@ -416,26 +416,26 @@ export default function GlobeDemo() {
           className="absolute top-4 left-4 z-10"
         >
         </motion.div>
-        <div className="absolute inset-0 z-0 md:mt-10 mx-auto" >
+        <div className="absolute inset-0 z-0 md:mt-10 mx-auto shadow-xl shadow-gray-700" >
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="w-full sm:border-2 sm:border-blue-900 mx-28 sm:shadow-lg sm:shadow-blue-500 rounded-3xl lg:w-1/2 p-8">
+      <div className="w-full sm:border-2 sm:border-blue-900 mx-28 sm:shadow-lg sm:shadow-sky-300 rounded-3xl lg:w-1/2 p-8">
         <form className="space-y-6 max-w-md mx-auto">
-          <h2 className="text-2xl text-blue-950 font-bold text-center mb-6">Contact Us</h2>
+          <h2 className="text-2xl text-white font-bold text-center mb-6">Contact Us</h2>
           <div>
-            <Label className="text-blue-950" htmlFor="name">Name</Label>
-            <Input className="mt-1 placeholder:text-blue-700" id="name" placeholder="Your name" />
+            <Label className="text-sky-200" htmlFor="name">Name</Label>
+            <Input className="mt-1 placeholder:text-sky-950" id="name" placeholder="Your name" />
           </div>
           <div>
-            <Label className="text-blue-950" htmlFor="email">Email</Label>
-            <Input className="mt-1 placeholder:text-blue-700" id="email" type="email" placeholder="your@email.com" />
+            <Label className="text-sky-200" htmlFor="email">Email</Label>
+            <Input className="mt-1 placeholder:text-sky-950" id="email" type="email" placeholder="your@email.com" />
           </div>
           <div>
-            <Label className="text-blue-950" htmlFor="message">Message</Label>
-            <Textarea className="mt-1 placeholder:text-blue-700" id="message" placeholder="Your message" rows={4} />
+            <Label className="text-sky-200" htmlFor="message">Message</Label>
+            <Textarea className="mt-1 placeholder:text-sky-950" id="message" placeholder="Your message" rows={4} />
           </div>
-          <Button type="submit" className="bg-blue-950 hover:bg-blue-800 w-full">
+          <Button type="submit" className="bg-sky-200 text-blue-950 hover:bg-blue-950 hover:text-white hover:shadow-sm hover:shadow-sky-200 w-full">
             Send Message
           </Button>
         </form>
