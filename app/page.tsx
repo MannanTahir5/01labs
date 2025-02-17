@@ -88,7 +88,7 @@ export default function page() {
         <div className='px-4 py-8 w-full flex flex-wrap justify-center gap-8'>
           {Services.map((service, index) => (<ThreeDCardDemo key={index} {...service} />))}
         </div>
-        <button onClick={() => router.push('/services')} className='bg-secondary text-primary hover:text-white hover:bg-primary hover:shadow-sm hover:shadow-secondary py-2 px-4 rounded-xl'>
+        <button onClick={() => router.push('/services')} className='bg-secondary text-primary hover:text-secondary hover:bg-primary hover:shadow-sm hover:shadow-secondary py-2 px-4 rounded-xl'>
           Explore Services
         </button>
       </div>
