@@ -26,7 +26,7 @@
     "react-icon": "^1.0.0",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.15.1",
-    "react-typical": "^0.1.3",
+    "react-three": "^0.8.0",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.173.0",
