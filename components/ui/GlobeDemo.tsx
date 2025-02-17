@@ -422,7 +422,7 @@ export default function GlobeDemo() {
       </div>
       <div className="w-full sm:border-2 sm:border-secondary mx-28 sm:shadow-lg sm:shadow-secondary rounded-3xl lg:w-1/2 p-8">
         <form className="space-y-6 max-w-md mx-auto">
-          <h2 className="text-2xl text-white font-bold text-center mb-6">Contact Us</h2>
+          <h2 className="text-2xl text-secondary font-bold text-center mb-6">Contact Us</h2>
           <div>
             <Label className="text-secondary" htmlFor="name">Name</Label>
             <Input className="mt-1 placeholder:text-primary" id="name" placeholder="Your name" />

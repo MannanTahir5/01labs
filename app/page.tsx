@@ -22,6 +22,7 @@ import { SiTensorflow } from "react-icons/si";
 import { FaShoppingCart } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 
+
 export default function page() {
   const router = useRouter();
 
@@ -52,9 +53,9 @@ export default function page() {
   
 
   return (
-    <div className=''>
+    <div>
       <div className='grid grid-cols-1 md:grid-cols-2 justify-center h-fit'>
-        <div className='col-span-1 pl-10 md:pl-20 pt-20 md:pt-60 text-amber-400'>
+        <div className='col-span-1 pl-10 md:pl-20 pt-32 md:pt-60 text-secondary'>
           <h1 className='font-bold text-4xl md:text-5xl'>01LABS</h1>
           {/* <Typical
             steps={[
@@ -77,14 +78,14 @@ export default function page() {
       </div>
       <div className='flex flex-col items-center h-1/2 pt-24 pb-48 text-secondary'>
         <h1 className='text-4xl'>WHO WE ARE</h1> 
-        <p className='mt-10 text-xl'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.</p>
-        <p className='text-center text-xl'>At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize<br/>
-           efficiency, accelerate growth, and redefine what’s possible for your business</p>
+        <p className='mt-10 text-xl text-center p-4 sm:px-64'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize
+          efficiency, accelerate growth, and redefine what’s possible for your business
+        </p>
       </div>
       
         <div className='flex flex-col justify-center items-center py-12'>
-        <h1 className='text-4xl font-semibold text-amber-400'>Our Key Weapons</h1>
-        <div className='py-8 w-full flex flex-wrap justify-center gap-8'>
+        <h1 className='text-4xl font-semibold text-secondary'>Our Key Weapons</h1>
+        <div className='px-4 py-8 w-full flex flex-wrap justify-center gap-8'>
           {Services.map((service, index) => (<ThreeDCardDemo key={index} {...service} />))}
         </div>
         <button onClick={() => router.push('/services')} className='bg-secondary text-primary hover:text-white hover:bg-primary hover:shadow-sm hover:shadow-secondary py-2 px-4 rounded-xl'>
@@ -92,10 +93,10 @@ export default function page() {
         </button>
       </div>
       <div>
-        <div className='text-secondary px:4 py-12 pt-24 pb-48 flex flex-col items-center'>
-          <p className='text-4xl'>From Zero to One—Why We Lead</p>
-          <p className='text-center mt-10 text-xl '>Discover how visionary leaders turn ideas into groundbreaking innovations and drive real change.<br/>
-          Explore the principles of leadership and innovation that transform industries and shape the future.<br/>
+        <div className='text-secondary py-12 pt-24 pb-48 flex flex-col justify-center items-center'>
+          <p className='text-3xl sm:text-4xl text-center'>From Zero to One—Why We Lead</p>
+          <p className='p-4 text-center mt-10 text-xl sm:px-64'>Discover how visionary leaders turn ideas into groundbreaking innovations and drive real change.
+          Explore the principles of leadership and innovation that transform industries and shape the future.
           Learn how to go beyond competition, create unique value, and lead with impact</p>
         </div>
       </div>
