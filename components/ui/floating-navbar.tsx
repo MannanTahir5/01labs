@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, JSX } from "react";
 import {
   motion,
   AnimatePresence,
@@ -54,7 +54,7 @@ console.log(direction)
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 py-4 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full bg-blue-950 shadow-sm shadow-amber-300 z-[5000] pr-2 pl-8  items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-10 py-4 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full backdrop-blur-sm z-[5000] pr-2 pl-8  items-center justify-center space-x-4",
           className
         )}
       >

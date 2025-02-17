@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-import Typical from 'react-typical'
+// import Typical from 'react-typical'
 import { useRouter } from 'next/navigation'
 import ThreeDCardDemo from '@/components/3d-card-demo';
 import { FaVuejs } from "react-icons/fa6";
@@ -18,6 +18,8 @@ import { SiGooglecloud } from "react-icons/si";
 import { FaShopify } from "react-icons/fa";
 import { SiWoocommerce } from "react-icons/si";
 import { FaWordpress } from "react-icons/fa";
+import { SiTensorflow } from "react-icons/si";
+import { FaShoppingCart } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 
 export default function page() {
@@ -29,40 +31,41 @@ export default function page() {
 
   const Services = [
     {
+      title: "AI/ML Development",
+      description: "Leverage the power of Artificial Intelligence and Machine Learning for automation and insights.",
+      imageUrl: <SiTensorflow size={200} />, 
+      buttonText: "Explore AI",
+    },
+    {
       title: "Full Stack Development",
-      description: "Build modern, scalable web applications with React.js",
-      imageUrl: <FaReact className='text-sky-300 ' size={200}/>,
+      description: "Build modern, scalable web applications with React.js and Next.js.",
+      imageUrl: <FaReact size={200} />,
       buttonText: "Get Started",
     },
     {
-      title: "Next.js Development",
-      description: "Enhance performance with server-side rendering using Next.js",
-      imageUrl: <SiNextdotjs className='text-sky-300' size={200}/>,
-      buttonText: "Contact Us",
-    },
-    {
-      title: "Vue.js Development",
-      description: "Develop high-performance applications with Vue.js",
-      imageUrl: <FaVuejs className='text-sky-300' size={200}/>,
-      buttonText: "Get Started",
+      title: "E-com & Digital Marketing",
+      description: "Grow your online presence with e-commerce solutions and targeted digital marketing strategies.",
+      imageUrl: <FaShoppingCart size={200} />,
+      buttonText: "Boost Sales",
     }
   ];
+  
 
   return (
-    <div className='bg-blue-950'>
+    <div className=''>
       <div className='grid grid-cols-1 md:grid-cols-2 justify-center h-fit'>
         <div className='col-span-1 pl-10 md:pl-20 pt-20 md:pt-60 text-amber-400'>
           <h1 className='font-bold text-4xl md:text-5xl'>01LABS</h1>
-          <Typical
+          {/* <Typical
             steps={[
               'Zero Limits One Vision Infinite Possibilities', 2000
             ]}
             loop={Infinity}
             wrapper="p"
             className='mt-3 text-xl md:text-2xl'
-          />
+          /> */}
           <button 
-            className='mt-10 md:mt-64 px-4 py-2 mb-6 rounded-xl bg-amber-400 hover:bg-blue-500 text-blue-950' 
+            className='mt-64 px-4 py-2 mb-6 rounded-xl bg-secondary hover:bg-primary hover:text-secondary hover:shadow-sm hover:shadow-secondary text-primary' 
             onClick={handleContactUsClick}
           >
             Contact Us
@@ -72,10 +75,10 @@ export default function page() {
           
         </div>
       </div>
-      <div className='flex flex-col items-center h-1/2 bg-sky-100 pt-24 pb-48 '>
-        <h1 className='text-4xl text-blue-950'>WHO WE ARE</h1> 
-        <p className='mt-10 text-xl text-blue-950'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.</p>
-        <p className='text-center text-xl text-blue-950'>At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize<br/>
+      <div className='flex flex-col items-center h-1/2 pt-24 pb-48 text-secondary'>
+        <h1 className='text-4xl'>WHO WE ARE</h1> 
+        <p className='mt-10 text-xl'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.</p>
+        <p className='text-center text-xl'>At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize<br/>
            efficiency, accelerate growth, and redefine what’s possible for your business</p>
       </div>
       
@@ -84,21 +87,24 @@ export default function page() {
         <div className='py-8 w-full flex flex-wrap justify-center gap-8'>
           {Services.map((service, index) => (<ThreeDCardDemo key={index} {...service} />))}
         </div>
-        <button onClick={() => router.push('/services')} className='bg-sky-200 text-blue-950 hover:text-white hover:bg-blue-950 hover:shadow-sm hover:shadow-sky-200 py-2 px-4 rounded-xl'>
+        <button onClick={() => router.push('/services')} className='bg-secondary text-primary hover:text-white hover:bg-primary hover:shadow-sm hover:shadow-secondary py-2 px-4 rounded-xl'>
           Explore Services
         </button>
       </div>
       <div>
-        <div className='bg-sky-100 py-12'>
-          From Zero to One—Why We Lead
+        <div className='text-secondary px:4 py-12 pt-24 pb-48 flex flex-col items-center'>
+          <p className='text-4xl'>From Zero to One—Why We Lead</p>
+          <p className='text-center mt-10 text-xl '>Discover how visionary leaders turn ideas into groundbreaking innovations and drive real change.<br/>
+          Explore the principles of leadership and innovation that transform industries and shape the future.<br/>
+          Learn how to go beyond competition, create unique value, and lead with impact</p>
         </div>
       </div>
-      <div className='bg-sky-200'>
-        <div className='text-blue-950 font-semibold text-xl sm:text-3xl flex justify-center pt-8 pb-12'>
+      <div className='bg-secondary'>
+        <div className='text-priamry font-semibold text-xl sm:text-3xl flex justify-center pt-8 pb-12'>
           Technologies We Work With
         </div>
         <div>
-          <Marquee className='text-blue-950 pb-5 gap-32' pauseOnHover gradient={false} speed={80}>
+          <Marquee className='text-primary pb-5 gap-32' pauseOnHover gradient={false} speed={80}>
             <div className='flex flex-row gap-32'>
               <FaReact size={100}/>
               <SiNextdotjs size={100}/>

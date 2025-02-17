@@ -24,25 +24,13 @@ export default function page() {
     {
       title: "React.js Development",
       description: "Build modern, scalable web applications with React.js",
-      imageUrl: <FaReact className='text-sky-300 ' size={200}/>,
+      imageUrl: <FaReact size={200}/>,
       buttonText: "Get Started",
     },
     {
       title: "Next.js Development",
       description: "Enhance performance with server-side rendering using Next.js",
-      imageUrl: <SiNextdotjs className='text-sky-300' size={200}/>,
-      buttonText: "Contact Us",
-    },
-    {
-      title: "Vue.js Development",
-      description: "Develop high-performance applications with Vue.js",
-      imageUrl: <FaVuejs className='text-sky-300' size={200}/>,
-      buttonText: "Get Started",
-    },
-    {
-      title: "Angular.js Development",
-      description: "Build dynamic web apps with Angular.js",
-      imageUrl: <FaAngular className='text-sky-300' size={200}/>,
+      imageUrl: <SiNextdotjs   size={200}/>,
       buttonText: "Contact Us",
     }
   ];
@@ -50,51 +38,33 @@ export default function page() {
     {
       title: "Python Django Development",
       description: "Create secure and scalable web applications using Django.",
-      imageUrl: <SiDjango className='text-sky-300' size={200}/>,
+      imageUrl: <SiDjango size={200}/>,
       buttonText: "Get Started",
     },
     {
       title: "Python FastAPI Development",
       description: "Develop high-performance APIs with FastAPI.",
-      imageUrl: <SiFastapi className='text-sky-300' size={200}/>,
+      imageUrl: <SiFastapi size={200}/>,
       buttonText: "Contact Us",
     },
     {
       title: "Node.js Development",
       description: "Build real-time and scalable backend solutions with Node.js.",
-      imageUrl: <FaNodeJs className='text-sky-300' size={200}/>,
+      imageUrl: <FaNodeJs size={200}/>,
       buttonText: "Get Started",
-    },
-    {
-      title: "Nest.js Development",
-      description: "Create maintainable and scalable backend apps with Nest.js.",
-      imageUrl: <SiNestjs className='text-sky-300' size={200}/>,
-      buttonText: "Contact Us",
-    },
-    {
-      title: ".NET Development",
-      description: "Develop enterprise-grade applications using .NET technologies.",
-      imageUrl: <AiOutlineDotNet className='text-sky-300' size={200}/>,
-      buttonText: "Get Started",
-    },
-    {
-      title: "PHP Laravel Development",
-      description: "Build fast and secure web applications with Laravel.",
-      imageUrl: <FaLaravel className='text-sky-300' size={200}/>,
-      buttonText: "Contact Us",
     }
   ];
   const DevOps = [
     {
       title: "AWS Cloud Services",
       description: "Scalable cloud computing solutions with AWS.",
-      imageUrl: <FaAws className='text-sky-300' size={200}/>,
+      imageUrl: <FaAws size={200}/>,
       buttonText: "Get Started",
     },
     {
       title: "GCP Cloud Services",
       description: "Cloud solutions with Google Cloud Platform.",
-      imageUrl: <SiGooglecloud className='text-sky-300' size={200}/>,
+      imageUrl: <SiGooglecloud size={200}/>,
       buttonText: "Contact Us",
     }
   ];
@@ -102,23 +72,21 @@ export default function page() {
     {
       title: "Shopify Development",
       description: "Launch and manage your online store with Shopify.",
-      imageUrl: <FaShopify className='text-sky-300' size={200}/>,
+      imageUrl: <FaShopify size={200}/>,
       buttonText: "Get Started",
     },
     {
       title: "WordPress Development",
       description: "Create dynamic and engaging websites using WordPress.",
-      imageUrl: <FaWordpress className='text-sky-300' size={200}/>,
+      imageUrl: <FaWordpress size={200}/>,
       buttonText: "Get Started",
     },
     {
       title: "WooCommerce Development",
       description: "Build powerful eCommerce stores with WooCommerce.",
-      imageUrl: <SiWoocommerce className='text-sky-300' size={200}/>,
+      imageUrl: <SiWoocommerce   size={200}/>,
       buttonText: "Contact Us",
-    }
-  ];
-  const digitalMarketingServices = [
+    },
     {
       title: "Social Media Marketing",
       description: "Boost your brand presence with strategic social media marketing.",
@@ -143,12 +111,12 @@ export default function page() {
   const { ref: backendRef, inView: backendInView } = useInView({ triggerOnce: true });
   const { ref: devopsRef, inView: devopsInView } = useInView({ triggerOnce: true });
   const { ref: ecomRef, inView: ecomInView } = useInView({ triggerOnce: true });
-  const { ref: digitalMarketingRef, inView: digitalMarketingInView } = useInView({ triggerOnce: true });
+  // const { ref: digitalMarketingRef, inView: digitalMarketingInView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="min-h-screen bg-blue-950 py-12 px-4 sm:px-2">
+    <div className="min-h-screen py-12 px-4 sm:px-2">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-white dark:text-white mt-28">Our Key Weapons</h1>
+        <h1 className="text-5xl font-bold text-center text-secondary dark:text-white mt-28">Our Key Weapons</h1>
         <div className='mt-12'>
           <h2 ref={frontendRef} className={`text-3xl text-sky-50 dark:text-white ${frontendInView ? 'animate__animated animate__fadeInLeft' : ''}`}>Frontend Development </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -174,21 +142,21 @@ export default function page() {
           </div>
         </div>
         <div>
-          <h2 ref={ecomRef} className={`text-3xl text-sky-50 dark:text-white mt-12 ${ecomInView ? 'animate__animated animate__fadeInLeft' : ''}`}>E-commerce Development</h2>
+          <h2 ref={ecomRef} className={`text-3xl text-sky-50 dark:text-white mt-12 ${ecomInView ? 'animate__animated animate__fadeInLeft' : ''}`}>E-commerce / Digital Marketing</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {Ecom.map((service, index) => (
               <ThreeDCardDemo key={index} {...service} />
             ))}
           </div>
         </div>
-        <div>
+        {/* <div>
           <h2 ref={digitalMarketingRef} className={`text-3xl text-sky-50 dark:text-white mt-12 ${digitalMarketingInView ? 'animate__animated animate__fadeInLeft' : ''}`}>Digital Marketing</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {digitalMarketingServices.map((service, index) => (
               <ThreeDCardDemo key={index} {...service} />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
