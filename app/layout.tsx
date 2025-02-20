@@ -4,6 +4,7 @@ import "./globals.css";
 import { FloatingNavDemo} from "@/components/ui/Heade";
 import Footer from "@/components/ui/Footer";
 import 'animate.css';
+import BinaryAnimation from "@/components/moving";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,8 @@ export default function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <FloatingNavDemo />
-        <div className="bg-primary">
+        <BinaryAnimation/>
+        <div className="bg-primary z-10">
         {children}
         </div>
         <Footer />

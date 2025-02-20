@@ -1,6 +1,6 @@
 "use client";
 import React from 'react'
-// import Typical from 'react-typical'
+import Typical from 'react-typical'
 import { useRouter } from 'next/navigation'
 import ThreeDCardDemo from '@/components/3d-card-demo';
 import { FaVuejs } from "react-icons/fa6";
@@ -59,14 +59,18 @@ export default function Page() {
       <div className='grid grid-cols-1 md:grid-cols-2 justify-center h-fit'>
         <div className='col-span-1 pl-10 md:pl-20 pt-32 md:pt-60 text-secondary'>
           <h1 className='font-bold text-4xl md:text-5xl'>01LABS</h1>
-          {/* <Typical
+         <div
+         
+            className='mt-3 text-xl md:text-2xl'
+            >
+         <Typical
             steps={[
               'Zero Limits One Vision Infinite Possibilities', 2000
             ]}
             loop={Infinity}
             wrapper="p"
-            className='mt-3 text-xl md:text-2xl'
-          /> */}
+          />
+         </div>
           <button 
             className='mt-64 px-4 py-2 mb-6 rounded-xl bg-secondary hover:bg-primary hover:text-secondary hover:shadow-sm hover:shadow-secondary text-primary' 
             onClick={handleContactUsClick}
@@ -75,7 +79,7 @@ export default function Page() {
           </button>
         </div>
         <div className='col-span-1'>
-          <BinaryAnimation/>
+          
         </div>
       </div>
       <div className='flex flex-col items-center h-1/2 pt-24 pb-48 text-secondary'>
