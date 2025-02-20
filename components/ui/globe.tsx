@@ -5,7 +5,7 @@ import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 // import { Object3DNode } from "@react-three/fiber/three-types";
 import { OrbitControls } from "@react-three/drei";
-import countries from "@/data/globe.json";
+import countries from "@/Data/globe.json";
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe:any;
