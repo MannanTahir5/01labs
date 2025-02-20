@@ -151,17 +151,17 @@ export default function Page() {
     <div className="min-h-screen py-12 px-4 sm:px-2">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-secondary dark:text-white mt-28">Our Key Weapons</h1>
-        <div className='mt-12'>
+        <div className='mt-12' id='ml'>
           <h2 ref={aiMlRef} className={`text-3xl text-sky-50 dark:text-white ${aiMlInView ? 'animate__animated animate__fadeInLeft' : ''}`}>AI / ML </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 " >
             {aiMlServices.map((service, index) => (
               <ThreeDCardDemo key={index} {...service} />
             ))}
           </div>
         </div>
-        <div className='mt-12'>
+        <div className='mt-12 ' id='fsd'>
           <h2 ref={frontendRef} className={`text-3xl text-sky-50 dark:text-white ${frontendInView ? 'animate__animated animate__fadeInLeft' : ''}`}>Frontend Development </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 " >
             {Frontendservices.map((service, index) => (
               <ThreeDCardDemo key={index} {...service} />
             ))}
@@ -183,7 +183,7 @@ export default function Page() {
             ))}
           </div>
         </div>
-        <div>
+        <div id='ecom' >
           <h2 ref={ecomRef} className={`text-3xl text-sky-50 dark:text-white mt-12 ${ecomInView ? 'animate__animated animate__fadeInLeft' : ''}`}>E-commerce / Digital Marketing</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {Ecom.map((service, index) => (
