@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <>
-      <footer className="text-white border-t-2 border-sky-200 bg-blue-950 body-font">
+      <footer className="text-white border-t-2 border-secondary bg-primary body-font">
         <div className="container px-5 py-20 mx-auto">
           <div className="flex flex-wrap md:text-left text-center order-first">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4 animate__fadeInLeft">
@@ -132,7 +132,7 @@ function Footer() {
         </div>
         <div>
           <div className="container px-5 py-6 mx-auto flex justify-center items-center sm:flex-row flex-col">
-            <p className="text-sm text-sky-300 sm:ml-6 sm:mt-0 mt-4">
+            <p className="text-sm text-secondary sm:ml-6 sm:mt-0 mt-4">
               © {new Date().getFullYear()} 01LABS
             </p>
           </div>

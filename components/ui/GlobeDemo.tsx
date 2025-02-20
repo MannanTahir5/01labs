@@ -15,16 +15,16 @@ export default function GlobeDemo() {
     pointSize: 4,
     globeColor: "#062056",
     showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
+    atmosphereColor: "#f2c438",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
+    polygonColor: "#f2c438",
+    ambientLight: "#f2c438",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
+    pointLight: "#f2c438",
     arcTime: 400,
     arcLength: 0.9,
     rings: 1,
@@ -34,7 +34,7 @@ export default function GlobeDemo() {
     autoRotateSpeed: .5,
     rotationSpeed :6,
   }
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"]
+  const colors = ["#f2c438", "#f2c438", "#f2c438"]
   const sampleArcs = [
     {
       order: 1,
@@ -399,7 +399,7 @@ export default function GlobeDemo() {
   ]
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full bg-blue-950 dark:bg-black">
+    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen w-full">
       <div className="w-full lg:w-1/2 h-[50vh]  lg:h-screen relative overflow-hidden">
         <motion.div
           initial={{
@@ -420,22 +420,22 @@ export default function GlobeDemo() {
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
-      <div className="w-full sm:border-2 sm:border-blue-900 mx-28 sm:shadow-lg sm:shadow-sky-300 rounded-3xl lg:w-1/2 p-8">
+      <div className="w-full sm:border-2 sm:border-secondary mx-28 sm:shadow-lg sm:shadow-secondary rounded-3xl lg:w-1/2 p-8">
         <form className="space-y-6 max-w-md mx-auto">
-          <h2 className="text-2xl text-white font-bold text-center mb-6">Contact Us</h2>
+          <h2 className="text-2xl text-secondary font-bold text-center mb-6">Contact Us</h2>
           <div>
-            <Label className="text-sky-200" htmlFor="name">Name</Label>
-            <Input className="mt-1 placeholder:text-sky-950" id="name" placeholder="Your name" />
+            <Label className="text-secondary" htmlFor="name">Name</Label>
+            <Input className="mt-1 placeholder:text-primary" id="name" placeholder="Your name" />
           </div>
           <div>
-            <Label className="text-sky-200" htmlFor="email">Email</Label>
-            <Input className="mt-1 placeholder:text-sky-950" id="email" type="email" placeholder="your@email.com" />
+            <Label className="text-secondary" htmlFor="email">Email</Label>
+            <Input className="mt-1 placeholder:text-primary" id="email" type="email" placeholder="your@email.com" />
           </div>
           <div>
-            <Label className="text-sky-200" htmlFor="message">Message</Label>
-            <Textarea className="mt-1 placeholder:text-sky-950" id="message" placeholder="Your message" rows={4} />
+            <Label className="text-secondary" htmlFor="message">Message</Label>
+            <Textarea className="mt-1 placeholder:text-primary" id="message" placeholder="Your message" rows={4} />
           </div>
-          <Button type="submit" className="bg-sky-200 text-blue-950 hover:bg-blue-950 hover:text-white hover:shadow-sm hover:shadow-sky-200 w-full">
+          <Button type="submit" className="bg-secondary text-primary hover:bg-primary hover:text-white hover:shadow-sm hover:shadow-secondary w-full">
             Send Message
           </Button>
         </form>
