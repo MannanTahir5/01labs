@@ -21,9 +21,11 @@ import { FaWordpress } from "react-icons/fa";
 import { SiTensorflow } from "react-icons/si";
 import { FaShoppingCart } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
+// import MovableComponent from '@/components/moving';
+import BinaryAnimation from '@/components/moving';
 
 
-export default function page() {
+export default function Page() {
   const router = useRouter();
 
   const handleContactUsClick = () => {
@@ -73,7 +75,7 @@ export default function page() {
           </button>
         </div>
         <div className='col-span-1'>
-          
+          <BinaryAnimation/>
         </div>
       </div>
       <div className='flex flex-col items-center h-1/2 pt-24 pb-48 text-secondary'>
@@ -101,7 +103,7 @@ export default function page() {
         </div>
       </div>
       <div className='bg-secondary'>
-        <div className='text-priamry font-semibold text-xl sm:text-3xl flex justify-center pt-8 pb-12'>
+        <div className='text-primary font-semibold text-xl sm:text-3xl flex justify-center pt-8 pb-12'>
           Technologies We Work With
         </div>
         <div>

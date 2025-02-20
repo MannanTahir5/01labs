@@ -15,7 +15,7 @@ import { FaBrain, FaCommentDots, FaMicrophoneAlt, FaPen, FaSearch, FaFileAlt } f
 import 'animate.css';
 import { useInView } from 'react-intersection-observer';
 
-export default function page() {
+export default function Page() {
   const Frontendservices = [
     {
       title: "React.js Development",

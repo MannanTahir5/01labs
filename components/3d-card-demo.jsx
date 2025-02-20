@@ -1,13 +1,13 @@
 "use client";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import type { CardProps } from "@/types/card"
+// import type { CardProps } from "@/types/card"
 
 export default function ThreeDCardDemo({
   title,
   description,
   imageUrl,
   buttonText
-}: CardProps) {
+}) {
   return (
     <CardContainer className="relative">
       <CardBody className="bg-primary hover:shadow-md hover:shadow-secondary dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-secondary w-auto sm:w-[25rem] h-[26rem] rounded-xl p-6 border">
