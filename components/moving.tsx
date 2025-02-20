@@ -33,7 +33,7 @@ export default function BinaryAnimation() {
       {binaries.map((binary) => (
         <span
           key={binary.id}
-          className="absolute text-secondary font-mono"
+          className="fixed  text-secondary font-mono"
           style={{
             left: `${binary.left}px`,
             fontSize: `${binary.size}rem`,
@@ -48,11 +48,11 @@ export default function BinaryAnimation() {
       <style jsx>{`
         @keyframes fall {
           0% {
-            transform: translateY(-100vh);
+            transform: translateY(-50vh);
             opacity: 1;
           }
           100% {
-            transform: translateY(500vh);
+            transform: translateY(200vh);
             opacity: 0.7;
           }
         }
