@@ -33,10 +33,11 @@ export default function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <FloatingNavDemo />
-        <BinaryAnimation/>
-        <div className="bg-primary z-10">
-        {children}
-        </div>
+        <div className="z-10 "> {/* Remove bg-primary */}
+  <BinaryAnimation>
+    {children}
+  </BinaryAnimation>
+</div>
         <Footer />
       </body>
     </html>
