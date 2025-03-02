@@ -148,7 +148,7 @@ export default function Page() {
   const { ref: ecomRef, inView: ecomInView } = useInView({ triggerOnce: true });
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-2">
+    <div className="min-h-screen py-12 px-4 sm:px-2 bg-primary">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-secondary dark:text-white mt-28">Our Key Weapons</h1>
         <div className='mt-12' id='ml'>

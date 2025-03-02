@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { FloatingNavDemo} from "@/components/ui/Heade";
+import { FloatingNavDemo } from "@/components/ui/Heade";
 import Footer from "@/components/ui/Footer";
 import 'animate.css';
 import BinaryAnimation from "@/components/moving";
@@ -33,11 +33,11 @@ export default function RootLayout({
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <FloatingNavDemo />
-        <div className="z-10 "> {/* Remove bg-primary */}
-  <BinaryAnimation>
-    {children}
-  </BinaryAnimation>
-</div>
+        {/* <div className="bg-primary"> */}
+          <div className="z-10  "> {/* Remove bg-primary */}
+            {children}
+          </div>
+        {/* </ div> */}
         <Footer />
       </body>
     </html>
