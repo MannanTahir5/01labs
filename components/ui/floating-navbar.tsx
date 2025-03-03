@@ -63,7 +63,7 @@ console.log(direction)
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-white items-center flex space-x-1 text-amber-400 dark:hover:text-sky-200 hover:text-white-200",
+              "relative dark:text-white items-center flex space-x-1 text-secondary dark:hover:text-sky-200 hover:text-white-200",
             )}
           >
             <span className="block text-sm">{navItem.name}</span>

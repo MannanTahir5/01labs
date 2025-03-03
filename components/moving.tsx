@@ -100,7 +100,7 @@ export default function BinaryAnimation({ children }: BinaryAnimationProps) {
             
             draw(): void {
                 if (!ctx) return;
-                ctx.fillStyle = `hsla(45, 87%, 59%, ${this.alpha})`;
+                ctx.fillStyle = `hsla(222, 6%, 85%, ${this.alpha})`;
                 ctx.font = `${this.displaySize}px monospace`;
                 ctx.fillText(this.char, this.x, this.y);
             }

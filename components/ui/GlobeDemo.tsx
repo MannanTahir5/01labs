@@ -15,13 +15,13 @@ export default function GlobeDemo() {
     pointSize: 4,
     globeColor: "#062056",
     showAtmosphere: true,
-    atmosphereColor: "#f2c438",
+    atmosphereColor: "#CFD3D9",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "#f2c438",
-    ambientLight: "#f2c438",
+    polygonColor: "#CFD3D9",
+    ambientLight: "#CFD3D9",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#f2c438",
@@ -34,7 +34,7 @@ export default function GlobeDemo() {
     autoRotateSpeed: .5,
     rotationSpeed :6,
   }
-  const colors = ["#f2c438", "#f2c438", "#f2c438"]
+  const colors = ["#CFD3D9", "#CFD3D9", "#CFD3D9"]
   const sampleArcs = [
     {
       order: 1,
