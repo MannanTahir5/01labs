@@ -92,3 +92,15 @@ body {
     @apply bg-background text-foreground;
   }
 }
+@keyframes slowBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the height as needed */
+  }
+}
+
+.big_boss {
+  animation: slowBounce 4s infinite; /* Adjust the duration as needed */
+}

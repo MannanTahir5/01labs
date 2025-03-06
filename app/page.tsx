@@ -23,6 +23,11 @@ import { FaShoppingCart } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 // import MovableComponent from '@/components/moving';
 import BinaryAnimation from '@/components/moving';
+import { TypeAnimation } from 'react-type-animation';
+import Image from 'next/image';
+import { Lora } from 'next/font/google';
+ 
+
 
 
 export default function Page() {
@@ -32,26 +37,34 @@ export default function Page() {
     router.push('/contact');
   }
 
+  const avatars = [
+    { id: 1, src: "/male.svg", alt: "Male Avatar 1", name: "Ahsan Naveed",role:"CEO" },
+    { id: 2, src: "/male.svg", alt: "Female Avatar 1",name: "Ahsan Naveed",role:"CEO"  },
+    { id: 3, src: "/male.svg", alt: "Male Avatar 2",name: "Ahsan Naveed",role:"CEO"  },
+    { id: 4, src: "/male.svg", alt: "Female Avatar 2",name: "Ahsan Naveed",role:"CEO"  },
+    { id: 5, src: "/male.svg", alt: "Male Avatar 3",name: "Ahsan Naveed",role:"CEO"  },
+  ];
+
   const Services = [
     {
       id: "ml",
       title: "AI/ML Development",
       description: "Leverage the power of Artificial Intelligence and Machine Learning for automation and insights.",
-      imageUrl: <SiTensorflow size={200} />,
+      imageUrl: <SiTensorflow size={100} />,
       buttonText: "Explore AI",
     },
     {
       id: "fsd",
       title: "Full Stack Development",
       description: "Build modern, scalable web applications with React.js and Next.js.",
-      imageUrl: <FaReact size={200} />,
+      imageUrl: <FaReact size={100} />,
       buttonText: "Get Started",
     },
     {
       id: "ecom",
       title: "E-com & Digital Marketing",
       description: "Grow your online presence with e-commerce solutions and targeted digital marketing strategies.",
-      imageUrl: <FaShoppingCart size={200} />,
+      imageUrl: <FaShoppingCart size={100} />,
       buttonText: "Boost Sales",
     }
   ];
@@ -62,17 +75,22 @@ export default function Page() {
         <BinaryAnimation >
       <div className='grid grid-cols-1 md:grid-cols-2 justify-center h-fit '>
         <div className='col-span-1 pl-10 md:pl-20 pt-32 md:pt-60 text-secondary'>
-          <h1 className='font-bold text-4xl md:text-5xl'>01LABS</h1>
+          <h1 className='font-serif font-normal text-4xl md:text-5xl'>01LABS</h1>
           <div
 
-            className='mt-3 text-xl md:text-2xl'
+            className='mt-3 h-10 text-xl md:text-2xl'
           >
-            <Typical
-              steps={[
-                'Zero Limits One Vision Infinite Possibilities', 2000
+            <TypeAnimation
+              sequence={[
+                'Zero Limits One Vision Infinite Possibilities', 2000, "", 1000,// Types 'Three' without deleting 'Two'
+                () => {
+                  console.log('Sequence completed');
+                },
               ]}
-              loop={Infinity}
               wrapper="p"
+              cursor={false}
+              repeat={Infinity}
+              // style={{ fontSize: '2em', display: 'inline-block' }}
             />
           </div>
           <button
@@ -87,11 +105,30 @@ export default function Page() {
         </div>
       </div>
         </BinaryAnimation>
-      <div className='flex flex-col items-center h-1/2 pt-24 pb-48 text-secondary bg-primary'>
-        <h1 className='text-4xl'>WHO WE ARE</h1>
-        <p className='mt-10 text-xl text-center p-4 sm:px-64'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize
+      <div className='flex flex-col items-center h-fit py-16 text-primary bg-sky-100'>
+        <h1 className='text-4xl mb-16'>WHO WE ARE</h1>
+        {/* <p className='mt-10 text-xl text-center p-4 sm:px-64'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize
           efficiency, accelerate growth, and redefine what’s possible for your business
-        </p>
+        </p> */}
+         <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-center w-screen px-64 gap-6 text-center">
+            {avatars.map((avatar) => (
+              <div key={avatar.id} className="flex items-end space-2">
+                <div className="w-32">
+                  <Image
+                    src={avatar.src}
+                    alt={avatar.alt}
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="pl-2 text-left">
+                  <p className="font-semibold text-lg">{avatar.name}</p>
+                  <p className="text-gray-700">{avatar.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
 
       <div className='flex flex-col justify-center items-center py-12 bg-primary'>

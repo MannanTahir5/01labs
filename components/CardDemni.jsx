@@ -12,16 +12,18 @@ export default function ThreeCard({
 }) {
   return (
     <CardContainer className="relative">
-      <CardBody className="bg-primary hover:shadow-md hover:shadow-secondary dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-secondary w-auto sm:w-[25rem] h-[26rem] rounded-xl p-6 border">
+      <CardBody className="bg-primary hover:shadow-md hover:shadow-secondary dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-secondary w-auto sm:w-[25rem] h-[326px] rounded-xl p-6 border">
         <CardItem translateZ="50" className="text-xl font-bold text-secondary">
           {title}
         </CardItem>
         <CardItem as="p" translateZ="60" className="text-gray-200 text-sm max-w-sm mt-2 dark:text-neutral-300">
           {description}
         </CardItem>
-        <CardItem translateZ="100" className="realtive flex text-secondary items-center justify-center w-full mt-5">
-          {imageUrl}
-        </CardItem>
+        <div className="flex items-center justify-center w-full h-48">
+          <CardItem translateZ="100" className="big_boss realtive flex text-secondary items-center justify-center w-full mt-5">
+            {imageUrl}
+          </CardItem>
+        </div>
         <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
           <Link href={`/services#${id}`}>
             <CardItem
