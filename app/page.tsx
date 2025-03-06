@@ -105,12 +105,12 @@ export default function Page() {
         </div>
       </div>
         </BinaryAnimation>
-      <div className='flex flex-col items-center h-fit py-16 text-primary bg-sky-100'>
+      <div className='flex flex-col items-center h-fit py-16 text-secondary bg-primary'>
         <h1 className='text-4xl mb-16'>WHO WE ARE</h1>
         {/* <p className='mt-10 text-xl text-center p-4 sm:px-64'>We don’t just develop software—we create intelligent, data-driven solutions that power businesses.At Zero1Lab, we harness the power of AI, intelligent automation, and cloud innovation to revolutionize
           efficiency, accelerate growth, and redefine what’s possible for your business
         </p> */}
-         <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-center w-screen px-64 gap-6 text-center">
+         <div className="grid grid-cols-2 sm:grid-cols-3 justify-center items-center px-64 gap-y-6 gap-x-28 text-center">
             {avatars.map((avatar) => (
               <div key={avatar.id} className="flex items-end space-2">
                 <div className="w-32">
@@ -124,7 +124,7 @@ export default function Page() {
                 </div>
                 <div className="pl-2 text-left">
                   <p className="font-semibold text-lg">{avatar.name}</p>
-                  <p className="text-gray-700">{avatar.role}</p>
+                  <p className="text-gray-300">{avatar.role}</p>
                 </div>
               </div>
             ))}
